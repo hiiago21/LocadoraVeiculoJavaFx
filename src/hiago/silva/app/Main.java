@@ -26,6 +26,7 @@ public class Main extends Application {
 			
 			scrollPane.setFitToHeight(true);
 			scrollPane.setFitToWidth(true);
+			primaryStage.setResizable(false);
 			
 			primaryStage.setScene(mainScene);
 			primaryStage.setTitle("Sistema Controle Locadora");
