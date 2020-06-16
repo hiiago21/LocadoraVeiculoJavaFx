@@ -4,6 +4,13 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewControler">
@@ -44,6 +51,42 @@
                   </Menu>
               </menus>
             </MenuBar>
+            <Pane prefHeight="369.0" prefWidth="586.0">
+               <children>
+                  <SplitPane prefHeight="377.0" prefWidth="200.0" style="-fx-background-color: #11474F;">
+                     <items>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <ImageView fitHeight="23.0" fitWidth="131.0" layoutX="34.0" layoutY="14.0">
+                                       <image>
+                                          <Image url="@../images/logoLabelWhite.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </items>
+                  </SplitPane>
+                  <Pane layoutX="200.0" prefHeight="373.0" prefWidth="399.0" style="-fx-background-color: #477575;">
+                     <children>
+                        <TableView layoutX="40.0" layoutY="96.0" prefHeight="263.0" prefWidth="319.0">
+                          <columns>
+                            <TableColumn prefWidth="158.0" text="Carros Locados" />
+                            <TableColumn minWidth="0.0" prefWidth="160.0" text="Carros Disponíveis" />
+                          </columns>
+                        </TableView>
+                        <ImageView fitHeight="76.0" fitWidth="293.0" layoutX="53.0" layoutY="14.0">
+                           <image>
+                              <Image url="@../images/logoSSMotors.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
          </children>
       </VBox>
    </content>
