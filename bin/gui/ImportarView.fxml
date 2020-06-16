@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox prefHeight="256.0" prefWidth="419.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
+<VBox prefHeight="256.0" prefWidth="419.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ImportarController">
    <children>
       <GridPane alignment="CENTER">
         <columnConstraints>
@@ -33,20 +32,20 @@
                   <Insets left="80.0" />
                </padding>
             </Label>
-            <TextField disable="true" GridPane.rowIndex="1">
+            <TextField fx:id="txtFielPath" disable="true" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin>
             </TextField>
             <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.rowIndex="2">
               <buttons>
-                <Button mnemonicParsing="false" text="Importar" />
+                <Button fx:id="btImportar" mnemonicParsing="false" onAction="#btImportarAction" text="Importar" />
               </buttons>
                <GridPane.margin>
                   <Insets right="20.0" top="50.0" />
                </GridPane.margin>
             </ButtonBar>
-            <Label alignment="CENTER_RIGHT" text="mensagem de retorno" GridPane.rowIndex="3">
+            <Label fx:id="labelAviso" alignment="CENTER_RIGHT" GridPane.rowIndex="3">
                <font>
                   <Font size="14.0" />
                </font>

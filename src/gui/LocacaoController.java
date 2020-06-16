@@ -53,7 +53,7 @@ public class LocacaoController implements Initializable {
 			
 			boolean result = locadora.locar(txtFielPlaca.getText(), txtFielNome.getText(), sdf.parse(dateInicia));
 			
-			locadora.exportar();
+			
 			if(result) {
 				JOptionPane.showInternalMessageDialog(null, "Locação","Locação efetuada com sucesso"
 						, JOptionPane.INFORMATION_MESSAGE);
