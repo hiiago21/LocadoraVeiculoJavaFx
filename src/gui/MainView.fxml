@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewControler">
+   <content>
+      <VBox prefHeight="376.0" prefWidth="586.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Consultas">
+                  <items>
+                    <MenuItem fx:id="veiculoPorPlaca" mnemonicParsing="false" onAction="#onMenuItemVeiculoPorPlacaAction" text="Veiculos por Placa" />
+                        <MenuItem fx:id="veiculosDisponveis" mnemonicParsing="false" onAction="#onMenuItemVeiculosDisponveisAction" text="Veiculos Disponíveis" />
+                        <MenuItem fx:id="veiculosLocados" mnemonicParsing="false" onAction="#onMenuItemveiculosLocadosAction" text="Veículos Locados" />
+                        <MenuItem fx:id="simular" mnemonicParsing="false" onAction="#onMenuItemSimularAction" text="Simular Devolução" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Locação">
+                  <items>
+                    <MenuItem fx:id="locacao" mnemonicParsing="false" onAction="#onMenuItemLocacaoAction" text="Locar Veiculo" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Devolução">
+                  <items>
+                    <MenuItem fx:id="devolucao" mnemonicParsing="false" onAction="#onMenuItemDevolucaoAction" text="Devolver Veiculo" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Importar/Exportar">
+                     <items>
+                        <MenuItem fx:id="importe" mnemonicParsing="false" onAction="#onMenuItemImportarAction" text="Importação" />
+                        <MenuItem fx:id="exporte" mnemonicParsing="false" onAction="#onMenuItemExportarAction" text="Exportar" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Compra/Vender">
+                     <items>
+                        <MenuItem fx:id="compra" mnemonicParsing="false" onAction="#onMenuItemComprarAction" text="Comprar Veiículo" />
+                        <MenuItem fx:id="venda" mnemonicParsing="false" onAction="#onMenuItemVenderAction" text="Vender Veículo" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>

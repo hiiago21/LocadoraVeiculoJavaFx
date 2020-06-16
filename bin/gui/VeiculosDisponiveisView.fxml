@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.VeiculosDisponiveisController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+            <Label prefHeight="17.0" prefWidth="246.0" text="Veiculos Disponíveis">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+        </items>
+      </ToolBar>
+      <TableView fx:id="tableViewVeiculosDisponiveis" prefHeight="329.0" prefWidth="530.0">
+        <columns>
+          <TableColumn fx:id="tableColunmPlaca" editable="false" prefWidth="75.0" text="Placa" />
+          <TableColumn fx:id="tableColunmTipo" editable="false" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="tableColunmModelo" prefWidth="99.0" text="Modelo" />
+            <TableColumn fx:id="tableColunmMarca" prefWidth="91.0" text="Marca" />
+            <TableColumn fx:id="tableColunmKm" prefWidth="102.0" text="Km" />
+            <TableColumn fx:id="tableColunmData" prefWidth="87.0" text="Ano" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
