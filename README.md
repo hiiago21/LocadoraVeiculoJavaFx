@@ -3,7 +3,7 @@
     </h1>
   
   <p align="center">
-  <img width="250" src="/src/images">
+  <img width="250" src="/src/images/logoSSMotornsWhite.png">
 </p>
 
 <h4>Sobre o projeto:</h4>
