@@ -1,90 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <VBox prefHeight="517.0" prefWidth="502.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hiago.silva.controllers.SimularDevolucaoController">
    <children>
-      <GridPane alignment="CENTER" vgap="60.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="184.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="318.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <Pane prefHeight="583.0" prefWidth="502.0" style="-fx-background-color: #222751; -fx-border-color: #000000;">
          <children>
-            <Label text="Data Inicial">
-               <GridPane.margin>
-                  <Insets left="70.0" />
-               </GridPane.margin>
+            <Pane layoutX="76.0" layoutY="110.0" prefHeight="298.0" prefWidth="383.0" style="-fx-background-color: #FEFEFE; -fx-border-color: #000000;">
+               <children>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+                <Button fx:id="btSimular" layoutX="277.0" layoutY="250.0" mnemonicParsing="false" onAction="#btConsultarAction" prefHeight="25.0" prefWidth="70.0" style="-fx-border-color: #000000;" text="Simular" />
+                  <Label layoutX="53.0" layoutY="190.0" text="Valor Total">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFielValorTotal" editable="false" layoutX="169.0" layoutY="190.0" prefHeight="25.0" prefWidth="178.0" style="-fx-border-color: #000000;" />
+                  <TextField fx:id="txtFielPlaca" layoutX="169.0" layoutY="141.0" prefHeight="25.0" prefWidth="178.0" style="-fx-border-color: #000000;" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="91.0" layoutY="141.0" text="Placa">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dateFim" layoutX="169.0" layoutY="90.0" prefHeight="25.0" prefWidth="178.0" style="-fx-border-color: #000000;" />
+                  <Label layoutX="68.0" layoutY="89.0" text="Data Final">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dateInicial" layoutX="169.0" layoutY="37.0" prefHeight="25.0" prefWidth="178.0" style="-fx-border-color: #000000;" />
+                  <Label layoutX="70.0" layoutY="37.0" text="Data Inicial">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Text fill="WHITE" layoutX="218.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Devolução">
                <font>
-                  <Font size="16.0" />
+                  <Font name="System Bold Italic" size="20.0" />
                </font>
-            </Label>
-            <DatePicker fx:id="dateInicial" prefHeight="25.0" prefWidth="225.0" GridPane.columnIndex="1" />
-            <Label text="Data Final" GridPane.rowIndex="1">
-               <font>
-                  <Font size="16.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets left="50.0" />
-               </GridPane.margin>
-            </Label>
-            <DatePicker fx:id="dateFim" prefHeight="25.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Placa" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets left="90.0" />
-               </GridPane.margin>
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtFielPlaca" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin>
-            </TextField>
-            <Label text="Valor Total" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets left="60.0" />
-               </GridPane.margin>
-               <font>
-                  <Font name="System Bold" size="20.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtFielValorTotal" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin>
-            </TextField>
+            </Text>
+            <ImageView fitHeight="40.0" fitWidth="150.0" layoutX="193.0" layoutY="51.0">
+               <image>
+                  <Image url="@../images/logoSSMotornsWhite.png" />
+               </image>
+            </ImageView>
          </children>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-         <VBox.margin>
-            <Insets top="50.0" />
-         </VBox.margin>
-      </GridPane>
-      <ButtonBar prefHeight="40.0" prefWidth="200.0">
-        <buttons>
-          <Button fx:id="btSimular" mnemonicParsing="false" onAction="#btConsultarAction" text="Simular" />
-        </buttons>
-         <VBox.margin>
-            <Insets right="10.0" top="20.0" />
-         </VBox.margin>
-      </ButtonBar>
+      </Pane>
    </children>
 </VBox>

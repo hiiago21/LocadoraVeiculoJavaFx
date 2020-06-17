@@ -1,66 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <VBox prefHeight="542.0" prefWidth="564.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hiago.silva.controllers.SetValorPadraoController">
    <children>
-      <GridPane alignment="CENTER" hgap="50.0" vgap="60.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="105.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="95.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <Pane prefHeight="571.0" prefWidth="564.0" style="-fx-background-color: #222751; -fx-border-color: #000000;">
          <children>
-            <Label prefHeight="25.0" prefWidth="224.0" text="Valor Padrão Atual" GridPane.columnSpan="2">
-               <GridPane.margin>
-                  <Insets left="100.0" />
-               </GridPane.margin>
+            <Pane layoutX="103.0" layoutY="132.0" prefHeight="279.0" prefWidth="391.0" style="-fx-background-color: #FEFEFE; -fx-border-color: #000000;">
+               <children>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+                  <Label layoutX="42.0" layoutY="63.0" prefHeight="25.0" prefWidth="149.0" text="Valor Padrão Atual">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFielVlrAtual" editable="false" layoutX="200.0" layoutY="63.0" promptText="00,00" style="-fx-border-color: #000000;" />
+                  <Label layoutX="42.0" layoutY="127.0" prefHeight="25.0" prefWidth="149.0" text="Novo Valor Padrão">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFielNovoValor" layoutX="200.0" layoutY="127.0" promptText="00,00" style="-fx-border-color: #000000;" />
+                <Button fx:id="btAlterar" layoutX="152.0" layoutY="221.0" mnemonicParsing="false" onAction="#btAlterarsAction" prefHeight="12.0" prefWidth="96.0" style="-fx-border-color: #000000;" text="Consultar" />
+               </children>
+            </Pane>
+            <Text fill="WHITE" layoutX="208.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor Padrão Atual">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="System Bold Italic" size="20.0" />
                </font>
-            </Label>
-            <TextField fx:id="txtFielVlrAtual" editable="false" promptText="00,00" GridPane.columnIndex="2" />
-            <Label GridPane.columnIndex="2">
-               <GridPane.margin>
-                  <Insets left="10.0" />
-               </GridPane.margin>
-            </Label>
-          <Button fx:id="btAlterar" mnemonicParsing="false" onAction="#btAlterarsAction" prefHeight="25.0" prefWidth="97.0" text="Consultar" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Label prefHeight="25.0" prefWidth="224.0" text="Valor Padrão Atual" GridPane.columnSpan="2" GridPane.rowIndex="1">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets left="100.0" />
-               </GridPane.margin>
-            </Label>
-            <TextField fx:id="txtFielNovoValor" promptText="00,00" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            </Text>
+            <ImageView fitHeight="49.0" fitWidth="188.0" layoutX="231.0" layoutY="71.0">
+               <image>
+                  <Image url="@../images/logoSSMotornsWhite.png" />
+               </image>
+            </ImageView>
          </children>
-         <padding>
-            <Insets left="20.0" />
-         </padding>
-         <VBox.margin>
-            <Insets top="50.0" />
-         </VBox.margin>
-      </GridPane>
-      <ButtonBar prefHeight="40.0" prefWidth="200.0">
-         <VBox.margin>
-            <Insets right="10.0" top="20.0" />
-         </VBox.margin>
-      </ButtonBar>
+      </Pane>
    </children>
 </VBox>

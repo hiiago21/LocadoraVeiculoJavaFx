@@ -1,59 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <VBox prefHeight="256.0" prefWidth="419.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hiago.silva.controllers.ExportController">
    <children>
-      <GridPane alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="264.0" prefWidth="427.0" style="-fx-background-color: #222751; -fx-border-color: #000000;">
          <children>
-            <Label text="Caminho da exportação">
+            <Label alignment="TOP_LEFT" layoutX="53.0" layoutY="28.0" prefHeight="25.0" prefWidth="274.0" text="Caminho da exportação" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="16.0" />
+                  <Font name="System Bold Italic" size="16.0" />
                </font>
                <padding>
                   <Insets left="80.0" />
                </padding>
             </Label>
-            <TextField fx:id="txtFielPath" disable="true" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin>
-            </TextField>
-            <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.rowIndex="2">
-              <buttons>
-                <Button fx:id="btExportar" mnemonicParsing="false" onAction="#btbtExportarAction" text="Exportar" />
-              </buttons>
-               <GridPane.margin>
-                  <Insets right="20.0" top="50.0" />
-               </GridPane.margin>
-            </ButtonBar>
-            <Label fx:id="labelAviso" alignment="CENTER_RIGHT" GridPane.rowIndex="3">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets top="50.0" />
-               </GridPane.margin>
-            </Label>
+            <Pane layoutX="114.0" layoutY="64.0" prefHeight="148.0" prefWidth="213.0" style="-fx-background-color: #FEFEFE; -fx-border-color: #000000;">
+               <children>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+                <Button fx:id="btExportar" layoutX="77.0" layoutY="101.0" mnemonicParsing="false" onAction="#btbtExportarAction" style="-fx-border-color: #000000;" text="Exportar" />
+                  <TextField fx:id="txtFielPath" disable="true" layoutX="17.0" layoutY="40.0" prefHeight="25.0" prefWidth="180.0" style="-fx-border-color: #000000;" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="27.0" fitWidth="104.0" layoutX="244.0" layoutY="15.0">
+               <image>
+                  <Image url="@../images/logoSSMotornsWhite.png" />
+               </image>
+            </ImageView>
          </children>
-      </GridPane>
+         <cursor>
+            <Cursor fx:constant="NE_RESIZE" />
+         </cursor>
+      </Pane>
    </children>
 </VBox>
