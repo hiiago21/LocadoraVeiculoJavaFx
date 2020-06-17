@@ -7,12 +7,14 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import hiago.silva.app.Main;
 import hiago.silva.model.entities.Locadora;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class SimularDevolucaoController implements Initializable {
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -20,19 +22,19 @@ public class SimularDevolucaoController implements Initializable {
 	MainViewControler mv = new MainViewControler();
 
 	@FXML
-	DatePicker dateInicial;
+	private DatePicker dateInicial;
 	
 	@FXML
-	DatePicker dateFim;
+	private DatePicker dateFim;
 	
 	@FXML
-	TextField txtFielPlaca;
+	private TextField txtFielPlaca;
 	
 	@FXML
-	TextField txtFielValorTotal;
+	private TextField txtFielValorTotal;
 
 	@FXML
-	Button btSimular;
+	private Button btSimular;
 
 	@FXML
 	private void btConsultarAction() {
@@ -51,9 +53,14 @@ public class SimularDevolucaoController implements Initializable {
 			int dias  = (int) Math.ceil((fim - ini)/1000/60/60/24);
 			
 			
-			Double valorTotal = locadora.simularValorDevolucao( txtFielPlaca.getText(), dias);
+			Double valorTotal = locadora.simularValorDevolucao( txtFielPlaca.getText().toUpperCase(), dias);
 			
-			txtFielValorTotal.setText(valorTotal.toString());
+			if(valorTotal.equals(0.0)) {
+				JOptionPane.showMessageDialog(null, "Dados Incorretos", "Error!", 0, null);
+			}else {
+				txtFielValorTotal.setText(valorTotal.toString());
+			}
+			
 		}
 		catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Dados Incorretos", "Error!", 0, null);
@@ -64,6 +71,9 @@ public class SimularDevolucaoController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
+		Stage stage = (Stage) Main.getMainScene().getWindow();
+		stage.setHeight(600);
+		stage.setWidth(620);
 	}
 
 }

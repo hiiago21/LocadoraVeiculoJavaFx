@@ -47,14 +47,9 @@
                   <Font name="System Bold Italic" size="16.0" />
                </font>
             </Label>
-            <ImageView fitHeight="52.0" fitWidth="200.0" layoutX="185.0" layoutY="408.0">
+            <ImageView fitHeight="52.0" fitWidth="200.0" layoutX="208.0" layoutY="88.0">
                <image>
                   <Image url="@../images/logoSSMotornsWhite.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="15.0" fitWidth="64.0" layoutX="14.0" layoutY="20.0">
-               <image>
-                  <Image url="@../images/logoLabelWhite.png" />
                </image>
             </ImageView>
          </children>

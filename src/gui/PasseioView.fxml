@@ -16,7 +16,7 @@
 
 <VBox prefHeight="397.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hiago.silva.controllers.PasseioController">
    <children>
-      <Pane prefHeight="433.0" prefWidth="707.0" style="-fx-border-color: #000000; -fx-background-color: #222751;">
+      <Pane fx:id="fundo2" prefHeight="433.0" prefWidth="707.0" style="-fx-border-color: #000000; -fx-background-color: #222751;">
          <children>
             <Pane layoutX="156.0" layoutY="24.0" prefHeight="349.0" prefWidth="529.0" style="-fx-background-color: #FEFEFE; -fx-border-color: #000000;">
                <children>

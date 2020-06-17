@@ -5,12 +5,14 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import hiago.silva.app.Main;
 import hiago.silva.model.entities.Locadora;
 import hiago.silva.model.entities.Veiculo;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class VenderController implements Initializable {
 
@@ -62,6 +64,9 @@ public class VenderController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
+		Stage stage = (Stage) Main.getMainScene().getWindow();
+		stage.setHeight(600);
+		stage.setWidth(620);
 	}
 
 }

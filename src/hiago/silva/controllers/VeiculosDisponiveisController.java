@@ -63,8 +63,12 @@ public class VeiculosDisponiveisController implements Initializable {
 		tableColunmModelo.setCellValueFactory(new PropertyValueFactory<>("modelo"));
 		tableColunmPlaca.setCellValueFactory(new PropertyValueFactory<>("placa"));
 		
-		Stage stage = (Stage)Main.getMainScene().getWindow();
-		tableViewVeiculosDisponiveis.prefHeightProperty().bind(stage.heightProperty());
+		Stage stage = (Stage) Main.getMainScene().getWindow();
+
+		stage.setHeight(600);
+		stage.setWidth(800);
+
+		tableViewVeiculosDisponiveis.setPrefHeight(stage.getHeight());
 	}
 	
 	public void upadateTable() { 

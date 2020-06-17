@@ -16,7 +16,7 @@
 
 <VBox prefHeight="338.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hiago.silva.controllers.CaminhaoController">
    <children>
-      <Pane prefHeight="342.0" prefWidth="707.0" style="-fx-background-color: #222751; -fx-border-color: #000000;">
+      <Pane fx:id="fundo2" prefHeight="342.0" prefWidth="707.0" style="-fx-background-color: #222751; -fx-border-color: #000000;">
          <children>
             <GridPane alignment="CENTER" layoutX="137.0" layoutY="11.0" prefHeight="313.0" prefWidth="556.0" style="-fx-background-color: #FEFEFE; -fx-border-color: #000000;" vgap="30.0">
               <columnConstraints>
@@ -117,7 +117,7 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <ComboBox fx:id="estilo" prefHeight="25.0" prefWidth="103.0" style="-fx-border-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="tipo" prefHeight="25.0" prefWidth="103.0" style="-fx-border-color: #000000;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                   <Button fx:id="btAction" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#onBtAction" prefHeight="24.0" prefWidth="103.0" style="-fx-border-color: #000000;" text="Comprar" GridPane.columnIndex="3" GridPane.rowIndex="5" />
                </children>
             </GridPane>

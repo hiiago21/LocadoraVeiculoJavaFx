@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="430.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hiago.silva.controllers.MainViewControler">
+	<children>
+		<Pane fx:id="fundo1" prefHeight="369.0" prefWidth="586.0">
+			<children>
+				<Pane fx:id="fundo2" layoutX="-7.0" prefHeight="373.0" prefWidth="600.0" style="-fx-background-color: #222751;">
+					<children>
+						<TableView fx:id="veiculosPrincipalLoc" layoutX="203.0" layoutY="58.0" prefHeight="301.0" prefWidth="195.0">
+							<columns>
+								<TableColumn fx:id="veiculosLoc" prefWidth="208.0" text="Carros Locados" />
+							</columns>
+						</TableView>
+						<TableView fx:id="veiculosPrincipalDisp" layoutX="391.0" layoutY="58.0" prefHeight="301.0" prefWidth="195.0">
+							<columns>
+								<TableColumn fx:id="veiculosDisp" prefWidth="187.0" text="Carros Disponíveis" />
+							</columns>
+						</TableView>
+						<Text fill="WHITE" layoutX="64.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">
+							<font>
+								<Font name="System Bold Italic" size="20.0" />
+							</font>
+						</Text>
+						<ImageView fitHeight="34.0" fitWidth="131.0" layoutX="26.0" layoutY="56.0">
+							<image>
+								<Image url="@../images/logoSSMotornsWhite.png" />
+							</image>
+						</ImageView>
+						<Text fill="WHITE" layoutX="305.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Listagem de Veículos">
+							<font>
+								<Font size="20.0" />
+							</font>
+						</Text>
+					</children>
+				</Pane>
+			</children>
+		</Pane>
+	</children>
+</VBox>

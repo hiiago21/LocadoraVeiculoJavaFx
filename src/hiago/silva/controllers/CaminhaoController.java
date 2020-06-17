@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import hiago.silva.app.Main;
 import hiago.silva.model.entities.Caminhao;
 import hiago.silva.model.entities.Locadora;
 import hiago.silva.model.entities.Veiculo;
@@ -16,6 +17,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class CaminhaoController implements Initializable {
 	
@@ -49,7 +52,12 @@ public class CaminhaoController implements Initializable {
 	@FXML
 	private Button btAction;
 	
-	private ObservableList<TipoCaminhao> obsList;
+	@FXML
+	private Pane fundo1;
+	@FXML
+	private Pane fundo2;
+	
+	private ObservableList<TipoCaminhao> list;
 
 	@FXML
 	public void onBtAction() {
@@ -80,13 +88,18 @@ public class CaminhaoController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {		
+		Stage stage = (Stage) Main.getMainScene().getWindow();
+		stage.setHeight(600);
+		stage.setWidth(800);
+		fundo2.setPrefHeight(600);
+		fundo2.setPrefWidth(800);
 		upadateTable();
 	}
 
 	public void upadateTable() { 
 		locadora.importar("C:\\Users\\locadora.txt");
-		obsList = FXCollections.observableArrayList(TipoCaminhao.values());
-		tipo.setItems(obsList);
+		list = FXCollections.observableArrayList(TipoCaminhao.values());
+		tipo.setItems(list);
 	}
 
 	public void upadateTable(Veiculo caminhao, Boolean enable, Boolean action) { 

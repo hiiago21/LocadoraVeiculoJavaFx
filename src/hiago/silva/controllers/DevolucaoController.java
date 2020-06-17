@@ -7,12 +7,15 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import hiago.silva.app.Main;
 import hiago.silva.model.entities.Locadora;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class DevolucaoController implements Initializable {
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -20,25 +23,30 @@ public class DevolucaoController implements Initializable {
 	MainViewControler mv = new MainViewControler();
 
 	@FXML
-	DatePicker dateInicial;
+	private DatePicker dateInicial;
 	
 	@FXML
-	DatePicker dateFim;
+	private DatePicker dateFim;
 	
 	@FXML
-	TextField txtFielKmRodado;
+	private TextField txtFielKmRodado;
 	
 	@FXML
-	TextField txtFielPlaca;
+	private TextField txtFielPlaca;
 	
 	@FXML
-	TextField txtFielDias;
+	private TextField txtFielDias;
 	
 	@FXML
-	TextField txtFielValor;
+	private TextField txtFielValor;
 
 	@FXML
-	Button btLocar;
+	private Button btLocar;
+	
+	@FXML
+	private Pane fundo1;
+	@FXML
+	private Pane fundo2;
 
 	@FXML
 	private void btLocarAction() {
@@ -83,6 +91,12 @@ public class DevolucaoController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
+		Stage stage = (Stage) Main.getMainScene().getWindow();
+		stage.setHeight(600);
+		stage.setWidth(800);
+		
+		fundo1.setPrefHeight(800);
+		fundo1.setPrefWidth(800);
 	}
 
 }

@@ -18,10 +18,10 @@
 
 <VBox prefHeight="430.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hiago.silva.controllers.LocacaoController">
    <children>
-      <Pane prefHeight="436.0" prefWidth="700.0" style="-fx-background-color: #222751; -fx-border-color: #000000;">
+      <Pane fx:id="fundo1" prefHeight="436.0" prefWidth="700.0" style="-fx-background-color: #222751; -fx-border-color: #000000;">
          <children>
             <ButtonBar prefHeight="40.0" prefWidth="200.0" />
-            <Pane layoutX="169.0" layoutY="20.0" prefHeight="394.0" prefWidth="514.0" style="-fx-background-color: #FEFEFE; -fx-border-color: #000000;">
+            <Pane fx:id="fundo2" layoutX="180.0" layoutY="80.0" prefHeight="394.0" prefWidth="514.0" style="-fx-background-color: #FEFEFE; -fx-border-color: #000000;">
                <children>
                   <GridPane alignment="CENTER" layoutX="39.0" layoutY="66.0" prefHeight="224.0" prefWidth="337.0" vgap="60.0">
                     <columnConstraints>

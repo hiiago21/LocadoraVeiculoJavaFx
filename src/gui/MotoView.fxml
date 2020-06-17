@@ -16,7 +16,7 @@
 
 <VBox prefHeight="338.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hiago.silva.controllers.MotoController">
    <children>
-      <Pane prefHeight="347.0" prefWidth="707.0" style="-fx-background-color: #222751; -fx-border-color: #000000;">
+      <Pane fx:id="fundo2" prefHeight="347.0" prefWidth="707.0" style="-fx-background-color: #222751; -fx-border-color: #000000;">
          <children>
             <Label layoutX="53.0" layoutY="56.0" prefHeight="30.0" prefWidth="49.0" text="Moto" textFill="WHITE">
                <font>

@@ -30,7 +30,7 @@
                      </font>
                   </Label>
                   <TextField fx:id="txtFielNovoValor" layoutX="200.0" layoutY="127.0" promptText="00,00" style="-fx-border-color: #000000;" />
-                <Button fx:id="btAlterar" layoutX="152.0" layoutY="221.0" mnemonicParsing="false" onAction="#btAlterarsAction" prefHeight="12.0" prefWidth="96.0" style="-fx-border-color: #000000;" text="Consultar" />
+                <Button fx:id="btAlterar" layoutX="152.0" layoutY="221.0" mnemonicParsing="false" onAction="#btAlterarsAction" prefHeight="12.0" prefWidth="96.0" style="-fx-border-color: #000000;" text="Mudar" />
                </children>
             </Pane>
             <Text fill="WHITE" layoutX="208.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor Padrão Atual">

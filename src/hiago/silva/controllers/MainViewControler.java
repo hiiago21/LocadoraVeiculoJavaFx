@@ -20,6 +20,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TableColumn;
@@ -27,6 +28,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 
 public class MainViewControler implements Initializable {
@@ -70,12 +72,21 @@ public class MainViewControler implements Initializable {
 	private Pane fundo1;
 	@FXML
 	private Pane fundo2;
+	@FXML
+	private Button home;
 	
 	
 
 	@FXML
 	public void onMenuItemVeiculoPorPlacaAction() {
 		loadView("/gui/VeiculoPorPlacaView.fxml", x -> {
+		});
+	}
+	
+	@FXML
+	public void onHomeAction() {
+		loadView("/gui/MainView2.fxml", (MainViewControler controller) -> {
+			controller.update2();
 		});
 	}
 
@@ -162,6 +173,8 @@ public class MainViewControler implements Initializable {
 					}
 				});
 		update();
+		fundo2.setPrefHeight(800);
+		fundo2.setPrefWidth(800);
 		
 	}
 	
@@ -171,6 +184,21 @@ public class MainViewControler implements Initializable {
 		obsListl = FXCollections.observableArrayList(locadora.getLocacao());
 		veiculosPrincipalDisp.setItems(obsList);
 		veiculosPrincipalLoc.setItems(obsListl);
+		
+		
+	}
+	
+	public void update2() {
+		locadora.importar("C:\\Users\\locadora.txt");
+		obsList = FXCollections.observableArrayList(locadora.veiculosDisponiveis());
+		obsListl = FXCollections.observableArrayList(locadora.getLocacao());
+		veiculosPrincipalDisp.setItems(obsList);
+		veiculosPrincipalLoc.setItems(obsListl);
+		
+		Stage stage = (Stage) Main.getMainScene().getWindow();
+
+		stage.setHeight(600);
+		stage.setWidth(800);
 		
 	}
 	

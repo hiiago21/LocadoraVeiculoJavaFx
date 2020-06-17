@@ -24,6 +24,8 @@ public class Main extends Application {
 			
 			scrollPane.setFitToHeight(true);
 			scrollPane.setFitToWidth(true);
+			primaryStage.setHeight(600.0);
+			primaryStage.setWidth(800);
 			primaryStage.setResizable(false);
 			
 			primaryStage.setScene(mainScene);

@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
+import hiago.silva.app.Main;
 import hiago.silva.model.entities.Locadora;
 import hiago.silva.model.entities.Moto;
 import hiago.silva.model.entities.Veiculo;
@@ -16,6 +17,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class MotoController implements Initializable{
 	
@@ -46,6 +49,11 @@ public class MotoController implements Initializable{
 	@FXML
 	private Button btAction;
 	
+	@FXML
+	private Pane fundo1;
+	@FXML
+	private Pane fundo2;
+	
 	private ObservableList<Estilo> obsList;
 	
 	@FXML
@@ -74,6 +82,11 @@ public class MotoController implements Initializable{
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {		
+		Stage stage = (Stage) Main.getMainScene().getWindow();
+		stage.setHeight(600);
+		stage.setWidth(800);
+		fundo2.setPrefHeight(600);
+		fundo2.setPrefWidth(800);
 		upadateTable();
 	}
 
