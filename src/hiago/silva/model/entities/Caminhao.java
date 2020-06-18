@@ -3,8 +3,7 @@ package hiago.silva.model.entities;
 import hiago.silva.model.entities.enums.TipoCaminhao;
 
 public class Caminhao extends Veiculo {
-	
-	private String tipoVeiculo = "Caminhão";
+
 	private long cargaMaxima;
 	private int nrEixos;
 	private TipoCaminhao tipo;
@@ -15,7 +14,6 @@ public class Caminhao extends Veiculo {
 		this.cargaMaxima = cargaMaxima;
 		this.nrEixos = nrEixos;
 		this.tipo = tipo;
-		this.tipoVeiculo = "Caminhão";
 	}
 
 	public long getCargaMaxima() {
@@ -31,9 +29,6 @@ public class Caminhao extends Veiculo {
 	}
 	
 
-	 public String getTipoVeiculo() {
-		return tipoVeiculo;
-	}
 
 	@Override
 		public double calcularDiaria() {

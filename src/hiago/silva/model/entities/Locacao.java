@@ -58,8 +58,6 @@ public class Locacao {
 		sb.append(";");
 		sb.append(this.getNome());
 		sb.append(";");
-		sb.append(this.veiculoLocado.getValorPadrao());
-		sb.append(";");
 		sb.append(this.veiculoLocado.getPlaca());
 
 		return sb.toString();

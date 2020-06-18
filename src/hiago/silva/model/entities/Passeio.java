@@ -1,8 +1,7 @@
 package hiago.silva.model.entities;
 
 public class Passeio extends Veiculo{
-	
-	private String tipoVeiculo;
+
 
 	private boolean luxo;
 	private int nroPortas;
@@ -14,7 +13,6 @@ public class Passeio extends Veiculo{
 		this.luxo = luxo;
 		this.nroPortas = nroPortas;
 		this.potencia = potencia;
-		this.tipoVeiculo = "Passeio";
 	}
 
 	public boolean isLuxo() {
@@ -29,10 +27,6 @@ public class Passeio extends Veiculo{
 		return potencia;
 	}	
 		
-	
-	 public String getTipoVeiculo() {
-		return tipoVeiculo;
-	}
 
 	@Override
 	public double calcularDiaria() {

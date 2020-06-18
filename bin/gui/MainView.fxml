@@ -65,14 +65,14 @@
                <children>
                   <Pane fx:id="fundo2" layoutX="-7.0" prefHeight="373.0" prefWidth="641.0" style="-fx-background-color: #222751;">
                      <children>
-                        <TableView fx:id="veiculosPrincipalLoc" layoutX="189.0" layoutY="58.0" prefHeight="301.0" prefWidth="209.0">
+                        <TableView fx:id="veiculosPrincipalLoc" layoutX="189.0" layoutY="58.0" prefHeight="301.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn fx:id="veiculosLoc" prefWidth="158.0" text="Carros Locados" />
+                            <TableColumn fx:id="veiculosLoc" prefWidth="208.0" text="Carros Locados" />
                           </columns>
                         </TableView>
-                        <TableView fx:id="veiculosPrincipalDisp" layoutX="398.0" layoutY="58.0" prefHeight="301.0" prefWidth="188.0">
+                        <TableView fx:id="veiculosPrincipalDisp" layoutX="387.0" layoutY="58.0" prefHeight="301.0" prefWidth="199.0">
                           <columns>
-                            <TableColumn fx:id="veiculosDisp" prefWidth="161.0" text="Carros Disponíveis" />
+                            <TableColumn fx:id="veiculosDisp" prefWidth="198.0" text="Carros Disponíveis" />
                           </columns>
                         </TableView>
                         <Text fill="WHITE" layoutX="64.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home">

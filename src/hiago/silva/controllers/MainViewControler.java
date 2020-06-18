@@ -203,7 +203,7 @@ public class MainViewControler implements Initializable {
 	}
 	
 
-	public synchronized <T> void loadView(String path, Consumer<T> inicializacaoAction) {
+	public synchronized <T> boolean loadView(String path, Consumer<T> inicializacaoAction) {
 
 		try {
 			
@@ -228,7 +228,9 @@ public class MainViewControler implements Initializable {
 			e.printStackTrace();
 			JOptionPane.showMessageDialog(null, "Erro em carregar a página", "Error!", 0, null);
 		}
+	
+		return true;
 
 	}
-
+		
 }

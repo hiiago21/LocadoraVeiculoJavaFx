@@ -26,17 +26,17 @@ public class ComprarController implements Initializable{
 	private ObservableList<String> obsList;
 	
 	public void onBtComprarAction() {
-		String result = tipoVeiculo.getValue();
-		
-		if(result.equals("Moto")) {
+		String result = tipoVeiculo.getValue().toUpperCase();
+		System.out.println(result);
+		if(result.equalsIgnoreCase("Moto")) {
 			mv.loadView("/gui/MotoView.fxml", (MotoController controller) -> {
 				controller.upadateTable(null, false, false);
 			});
-		}else if(result.equals("Passeio")) {
+		}else if(result.equalsIgnoreCase("Passeio")) {
 			mv.loadView("/gui/PasseioView.fxml", (PasseioController controller) -> {
 				controller.upadateTable(null, false, false);
 			});
-		}else if(result.equals("Caminhão")) {
+		}else if(result.equalsIgnoreCase("Caminhão")) {
 			mv.loadView("/gui/CaminhaoView.fxml", (CaminhaoController controller) -> {
 				controller.upadateTable(null, false, false);
 			});

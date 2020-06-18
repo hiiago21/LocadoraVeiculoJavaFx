@@ -31,17 +31,17 @@ public class VeiculoPorPlacaController implements Initializable {
 		Veiculo returnConsulta;
 		try{
 			 returnConsulta = locadora.consultarVeiculo(txtFielPlaca.getText().toUpperCase());
-			 if (returnConsulta.getTipoVeiculo().equals("Moto")) {
+			 if (returnConsulta.getClass().getSimpleName().equalsIgnoreCase("Moto")) {
 					mv.loadView("/gui/MotoView.fxml", (MotoController controller) -> {
 						controller.upadateTable(returnConsulta, true, true);
 					});
 			 }
-			 else if (returnConsulta.getTipoVeiculo().equals("Caminhão")) {
+			 else if (returnConsulta.getClass().getSimpleName().equalsIgnoreCase("Caminhao")) {
 					mv.loadView("/gui/CaminhaoView.fxml", (CaminhaoController controller) -> {
 						controller.upadateTable(returnConsulta, true, true);
 					});
 			 }
-			 else if (returnConsulta.getTipoVeiculo().equals("Passeio")) {
+			 else if (returnConsulta.getClass().getSimpleName().equalsIgnoreCase("Passeio")) {
 					mv.loadView("/gui/PasseioView.fxml", (PasseioController controller) -> {
 						controller.upadateTable(returnConsulta, true, true);
 					});

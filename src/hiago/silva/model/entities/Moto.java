@@ -4,7 +4,6 @@ import hiago.silva.model.entities.enums.Estilo;
 
 public class Moto extends Veiculo {
 
-	private String tipoVeiculo;
 	private Estilo estiloMoto;
 	private int potencia;
 
@@ -12,7 +11,6 @@ public class Moto extends Veiculo {
 		super(ano, kmRodado, marca, modelo, placa);
 		this.estiloMoto = estiloMoto;
 		this.potencia = potencia;
-		this.tipoVeiculo = "Moto";
 	}
 
 	public Estilo getEstiloMoto() {
@@ -21,10 +19,6 @@ public class Moto extends Veiculo {
 
 	public int getPotencia() {
 		return potencia;
-	}
-	
-	public String getTipoVeiculo() {
-		return tipoVeiculo;
 	}
 
 	@Override

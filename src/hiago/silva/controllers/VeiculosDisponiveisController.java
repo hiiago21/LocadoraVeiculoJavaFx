@@ -6,15 +6,17 @@ import java.util.ResourceBundle;
 import hiago.silva.app.Main;
 import hiago.silva.model.entities.Locadora;
 import hiago.silva.model.entities.Veiculo;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 public class VeiculosDisponiveisController implements Initializable {
 	
@@ -56,7 +58,13 @@ public class VeiculosDisponiveisController implements Initializable {
 	private void initializeNodes() {
 		
 	
-		tableColunmTipo.setCellValueFactory(new PropertyValueFactory<>("tipoVeiculo"));
+		tableColunmTipo.setCellValueFactory(
+				new Callback<TableColumn.CellDataFeatures<Veiculo, String>, ObservableValue<String>>() {
+			@Override
+			public ObservableValue<String> call(TableColumn.CellDataFeatures<Veiculo, String> param) {
+				return new SimpleStringProperty(param.getValue().getClass().getSimpleName());
+			}
+		});
 		tableColunmData.setCellValueFactory(new PropertyValueFactory<>("ano"));
 		tableColunmKm.setCellValueFactory(new PropertyValueFactory<>("kmRodado"));
 		tableColunmMarca.setCellValueFactory(new PropertyValueFactory<>("marca"));

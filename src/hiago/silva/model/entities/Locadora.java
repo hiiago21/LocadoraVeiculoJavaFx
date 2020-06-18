@@ -66,11 +66,11 @@ public class Locadora {
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
 
 			for (Veiculo v : veiculos) {
-				bw.write(v.exportar());
+				bw.write(v.exportar().toUpperCase());
 				bw.newLine();
 			}
 			for (Locacao l : locacao) {
-				bw.write(l.exportar());
+				bw.write(l.exportar().toUpperCase());
 				bw.newLine();
 			}
 
@@ -152,7 +152,7 @@ public class Locadora {
 					
 					String data = line.substring(2, 12);
 					String nome = dados[2];
-					String placa = dados[4];
+					String placa = dados[3];
 					
 					try {
 						locar(placa, nome, sdf.parse(data));
@@ -223,7 +223,7 @@ public class Locadora {
 
 		for (Veiculo v : veiculos) {
 			if (v.getPlaca() == placa) {
-				return "Veículo para ser vendido" + v.toString();
+				return "Veículo para ser vendido" ;
 			}
 		}
 

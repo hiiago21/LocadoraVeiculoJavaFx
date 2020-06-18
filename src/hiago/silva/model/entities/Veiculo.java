@@ -2,7 +2,6 @@ package hiago.silva.model.entities;
 
 public abstract class Veiculo {
 	
-	private String tipoVeiculo;
 	private int ano;
 	private long kmRodado;
 	private String marca;
@@ -21,10 +20,6 @@ public abstract class Veiculo {
 	}
 
 
-	
-	public String getTipoVeiculo() {
-		return tipoVeiculo;
-	}
 
 	public int getAno() {
 		return ano;
