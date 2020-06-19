@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
-import hiago.silva.app.Main;
+import hiago.silva.app.MainLocadora;
 import hiago.silva.model.entities.Locadora;
 import hiago.silva.model.entities.Veiculo;
 import javafx.fxml.FXML;
@@ -55,7 +55,7 @@ public class VeiculoPorPlacaController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		Stage stage = (Stage) Main.getMainScene().getWindow();
+		Stage stage = (Stage) MainLocadora.getMainScene().getWindow();
 		stage.setHeight(600);
 		stage.setWidth(620);
 	}

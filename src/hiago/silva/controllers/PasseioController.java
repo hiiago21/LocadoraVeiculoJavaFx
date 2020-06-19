@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
-import hiago.silva.app.Main;
+import hiago.silva.app.MainLocadora;
 import hiago.silva.model.entities.Locadora;
 import hiago.silva.model.entities.Passeio;
 import hiago.silva.model.entities.Veiculo;
@@ -68,25 +68,33 @@ public class PasseioController implements Initializable{
 		String nroPortas = txtFielPortas.getText();
 		String potencia = txtFielPotencia.getText();
 		Boolean luxo = estilo.getValue();
-
-		Passeio p = new Passeio(Integer.parseInt(ano), Long.parseLong(kmRodado), marca, modelo, placa,
-				luxo, Integer.parseInt(nroPortas), Integer.parseInt(potencia));
 		
-		boolean result = locadora.compraVeiculo(p);
+		boolean result = false;
+		
+		try {
+			Passeio p = new Passeio(Integer.parseInt(ano), Long.parseLong(kmRodado), marca, modelo, placa,
+					luxo, Integer.parseInt(nroPortas), Integer.parseInt(potencia));
+			 result = locadora.compraVeiculo(p);
+		}
+		catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "Dados Incorretos", "Falha!", 0, null);
+		}
+		
+		
+		
 		
 		if(result) {
 			locadora.exportar();
-		}{
-			JOptionPane.showMessageDialog(null, "Placa incorreta ou não consta no sistema", "Error!", 0, null);
+			JOptionPane.showMessageDialog(null, "Compra Efetuada", "Compra", JOptionPane.INFORMATION_MESSAGE);
+			mv.loadView("/gui/MainView2.fxml", x -> {
+			});
 		}
-		mv.loadView("/gui/MainView.fxml", x -> {
-		});
 	}
 	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {		
-		Stage stage = (Stage) Main.getMainScene().getWindow();
+		Stage stage = (Stage) MainLocadora.getMainScene().getWindow();
 		stage.setHeight(600);
 		stage.setWidth(800);
 		fundo2.setPrefHeight(600);

@@ -9,7 +9,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class MainLocadora extends Application {
 	private static Scene mainScene;
 	@Override
 	public void start(Stage primaryStage) throws Exception {

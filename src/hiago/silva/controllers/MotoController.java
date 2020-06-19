@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
-import hiago.silva.app.Main;
+import hiago.silva.app.MainLocadora;
 import hiago.silva.model.entities.Locadora;
 import hiago.silva.model.entities.Moto;
 import hiago.silva.model.entities.Veiculo;
@@ -66,23 +66,30 @@ public class MotoController implements Initializable{
 		Estilo estiloMoto = estilo.getValue();
 		String potencia = txtFielPotencia.getText();
 		
-		Moto m = new Moto(Integer.parseInt(ano), Long.parseLong(kmRodado), marca, modelo, placa,
-				estiloMoto, Integer.parseInt(potencia));
 		
-		boolean result = locadora.compraVeiculo(m);
+		boolean result = false;
+		try {
+			Moto m = new Moto(Integer.parseInt(ano), Long.parseLong(kmRodado), marca, modelo, placa,
+					estiloMoto, Integer.parseInt(potencia));
+			result = locadora.compraVeiculo(m);
+		}
+		catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(null, "Dados Incorretos", "Falha!", 0, null);
+		}
+		
 		
 		if(result) {
 			locadora.exportar();
-		}{
-			JOptionPane.showMessageDialog(null, "Placa incorreta ou não consta no sistema", "Error!", 0, null);
-		}
-		mv.loadView("/gui/MainView.fxml", x -> {
-		});
+			JOptionPane.showMessageDialog(null, "Compra Efetuada", "Compra", JOptionPane.INFORMATION_MESSAGE);
+			mv.loadView("/gui/MainView2.fxml", x -> {
+			});
+		} 
+		
 	}
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {		
-		Stage stage = (Stage) Main.getMainScene().getWindow();
+		Stage stage = (Stage) MainLocadora.getMainScene().getWindow();
 		stage.setHeight(600);
 		stage.setWidth(800);
 		fundo2.setPrefHeight(600);

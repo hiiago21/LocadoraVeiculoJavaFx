@@ -7,7 +7,7 @@ import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
-import hiago.silva.app.Main;
+import hiago.silva.app.MainLocadora;
 import hiago.silva.model.entities.Locadora;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -91,7 +91,7 @@ public class DevolucaoController implements Initializable {
 
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		Stage stage = (Stage) Main.getMainScene().getWindow();
+		Stage stage = (Stage) MainLocadora.getMainScene().getWindow();
 		stage.setHeight(600);
 		stage.setWidth(800);
 		

@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-import hiago.silva.app.Main;
+import hiago.silva.app.MainLocadora;
 import hiago.silva.model.entities.Locacao;
 import hiago.silva.model.entities.Locadora;
 import javafx.beans.property.SimpleStringProperty;
@@ -117,7 +117,7 @@ public class VeiculosLocadosController implements Initializable {
 					}
 				});
 
-		Stage stage = (Stage) Main.getMainScene().getWindow();
+		Stage stage = (Stage) MainLocadora.getMainScene().getWindow();
 
 		stage.setHeight(600);
 		stage.setWidth(800);

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 
 import javax.swing.JOptionPane;
 
-import hiago.silva.app.Main;
+import hiago.silva.app.MainLocadora;
 import hiago.silva.model.entities.Locacao;
 import hiago.silva.model.entities.Locadora;
 import hiago.silva.model.entities.Veiculo;
@@ -195,7 +195,7 @@ public class MainViewControler implements Initializable {
 		veiculosPrincipalDisp.setItems(obsList);
 		veiculosPrincipalLoc.setItems(obsListl);
 		
-		Stage stage = (Stage) Main.getMainScene().getWindow();
+		Stage stage = (Stage) MainLocadora.getMainScene().getWindow();
 
 		stage.setHeight(600);
 		stage.setWidth(800);
@@ -209,7 +209,7 @@ public class MainViewControler implements Initializable {
 			
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
 			VBox cenaAtual = loader.load();
-			Scene mainScene = Main.getMainScene();
+			Scene mainScene = MainLocadora.getMainScene();
 
 			VBox mainVbox = (VBox) ((ScrollPane) mainScene.getRoot()).getContent();
 

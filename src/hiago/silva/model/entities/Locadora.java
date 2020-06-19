@@ -216,14 +216,16 @@ public class Locadora {
 	public String vender(String placa) {
 
 		for (Locacao l : locacao) {
-			if (l.getVeiculoLocado().getPlaca() == placa) {
+			if (l.getVeiculoLocado().getPlaca().equalsIgnoreCase(placa)) {
 				return "Veículo Locado";
 			}
 		}
 
 		for (Veiculo v : veiculos) {
-			if (v.getPlaca() == placa) {
-				return "Veículo para ser vendido" ;
+			if (v.getPlaca().equalsIgnoreCase(placa)) {
+				veiculos.remove(v);
+				exportar();
+				return "Veículo vendido" ;
 			}
 		}
 

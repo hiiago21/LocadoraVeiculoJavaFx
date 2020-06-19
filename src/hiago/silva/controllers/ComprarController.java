@@ -3,7 +3,7 @@ package hiago.silva.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import hiago.silva.app.Main;
+import hiago.silva.app.MainLocadora;
 import hiago.silva.model.entities.Locadora;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -45,7 +45,7 @@ public class ComprarController implements Initializable{
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {		
-		Stage stage = (Stage) Main.getMainScene().getWindow();
+		Stage stage = (Stage) MainLocadora.getMainScene().getWindow();
 		stage.setHeight(600);
 		stage.setWidth(600);
 		upadateTable();

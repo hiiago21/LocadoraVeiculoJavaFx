@@ -4,7 +4,7 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ResourceBundle;
 
-import hiago.silva.app.Main;
+import hiago.silva.app.MainLocadora;
 import hiago.silva.model.entities.Locadora;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -36,7 +36,7 @@ public class ImportarController implements Initializable {
 
 	@FXML
 	private void btImportarAction() {
-		String path = "C:\\Users\\locadora.txt";
+		String path = "/images/locadora.txt";
 		
 		locadora.importar(path);
 		txtFielPath.setText(path);
@@ -47,7 +47,7 @@ public class ImportarController implements Initializable {
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		
-		Stage stage = (Stage) Main.getMainScene().getWindow();
+		Stage stage = (Stage) MainLocadora.getMainScene().getWindow();
 		stage.setHeight(600);
 		stage.setWidth(620);
 		fundo2.setPrefHeight(600);
